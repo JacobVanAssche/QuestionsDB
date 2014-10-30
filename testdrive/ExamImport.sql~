@@ -1,0 +1,43 @@
+SET SQL_MODE = 'NO_BACKSLASH_ESCAPES';
+DELETE FROM tmp_5;
+DELETE FROM tmp_1;
+DELETE FROM tmp_2;
+DELETE FROM tmp_3;
+DELETE FROM tmp_4;
+DELETE FROM tmp_6;
+INSERT INTO tmp_1(Header, QuestionText) VALUES ("1.0","Find $\frac{\partial z}{\partial x}$, $\frac{\partial z}{\partial y}$. 
+ $$ \ln(x+z)+e^{yz}+\sin(xy)=20.$$
+ ");
+INSERT INTO tmp_1(Header, QuestionText) VALUES ("2.0","m Consider the following parametrized curve: $$\overrightarrow{r}(s)=\left(\left(1-\frac{2}{3}s\right)^{\frac{3}{2}},\left(\frac{2}{3}s\right)^{\frac{3}{2}}\right),\; 0\le s\le\frac{3}{2}.$$
+\begin{enumerate}[(a)]
+ \item Verify that $s$ is an arc-length parameter.
+ \item Find the unit tangent vector $T(s)$ and the unit normal vector $N(s)$.
+ \item Find the curvature.
+\end{enumerate}
+.
+
+\newpage");
+INSERT INTO tmp_1(Header, QuestionText) VALUES ("3.0","Let $f(x,y)$ be the function 
+$\begin{cases}
+\frac{x}{y}+  \frac{y}{x}& \mbox{, if } x,y\neq 0\\
+0 & \mbox{, if } x=0\mbox{ or } y=0\\
+ \end{cases}
+$
+\begin{enumerate}[(a)]
+ \item Find the partial derivatives $f_x(x,y),f_y(x,y)$ (i) when  $x,y\neq 0$ and (ii) when $(x,y)=(0,0)$.
+\item Find the gradient $\bigtriangledown f$ at $(1,2)$ and $(0,0)$.
+ \item Find the (directional) derivative $D_u(f)$ at $(1,2)$ and $(0,0)$ in the direction of $\overrightarrow{u}=(2,3)$.
+ \item Find the direction $\overrightarrow{u}$ that maximizes $D_u(f)(1,2)$. That is the value of $D_u(f)(1,2)$ in this direction?
+ \end{enumerate}
+ .
+ \newpage
+ 
+ ");
+INSERT INTO tmp_1(Header, QuestionText) VALUES ("4.0"," Let $f(x,y)=4x^2e^y-2x^4-e^{4y}$. Find all critical points of $f$ and determine if they are relative minimum, relative maximum, or saddle points. 
+ .
+ ");
+INSERT INTO tmp_2(Header, Part) VALUES ("1.0","");
+INSERT INTO tmp_2(Header, Part) VALUES ("2.0","");
+INSERT INTO tmp_2(Header, Part) VALUES ("3.0","");
+INSERT INTO tmp_2(Header, Part) VALUES ("4.0","");
+INSERT INTO tmp_6(Title, CourseName, Section, Semester, Year, TexFile, Date) VALUES ("Exam 2","Analytic Geometry and Calculus III","","Winter","2014","\documentclass{article}\usepackage{amsmath,amssymb,amsfonts,amsthm}\usepackage{graphicx}\usepackage{fancyhdr}\usepackage{lastpage}\usepackage{enumerate}\usepackage{color}\usepackage[usenames,dvipsnames,table]{xcolor}\pagestyle{fancy}\begin{document}\newcommand{\class}{Analytic Geometry and Calculus III}\newcommand{\exam}{Exam 2}\newcommand{\duration}{50}\newcommand{\examdate}{March $10^{th}, 2014$}\newcommand{\instructor}{ Ioannis Souldatos }\lfoot{Given by \instructor on \examdate.}\cfoot{}\rfoot{Page \thepage \hspace{2pt}of \pageref{LastPage}}\addtolength{\hoffset}{-1cm}%\addtolength{\marginparwidth}{-1cm}\addtolength{\textwidth}{2cm}\newcommand{\emptybox}{\framebox[3cm]{\rule{0mm}{10pt}}}\newcommand{\hemptybox}[1]{\framebox[#1 cm]{\rule{0mm}{10pt}}}\newcommand{\vemptybox}[1]{\framebox[3cm]{\rule{0mm}{#1 cm}}}\newcommand{\hvemptybox}[2]{\framebox[#1 cm]{\rule{0mm}{#2 cm}}}\newcommand{\vhemptybox}[2]{\framebox[#2 cm]{\rule{0mm}{#1 cm}}}\renewcommand{\footrulewidth}{1pt}\newcommand{\gap}{\hspace{.5cm}}\definecolor{light-gray}{gray}{.85}\newcommand{\highlight}[1]{\colorbox{light-gray}{#1}}\newcommand{\nota}{None of the above}%\newcommand{\newone}{\ensuremath{}}%\newtheorem{}{}\newtheorem{theorem}{Theorem}\newtheorem{lemma}[theorem]{Lemma}\newtheorem{corollary}[theorem]{Corollary}\newtheorem{definition}[theorem]{Definition}\newtheorem{claim}{Claim}\newtheorem{note}[theorem]{Note}\newtheorem{problem}{Problem}\newtheorem{question}{}[problem]\begin{center}\LARGE{\class- \exam}\end{center}\begin{tabular}{|c|c|}\hlineLast Name &  \verb|                |\\\hlineFirst Name & \\\hline\end{tabular}\hspace{.1cm}\begin{tabular}{|c|c|c|c|}\hlineProblem 1 &  \verb|     | /6 &Problem 3 &  \verb|     | /10\\\hlineProblem 2 &  \verb|     | /7 &Problem 4 &  \verb|     | /11\\\hline &  \verb|     | & Total &  \verb|     | /34\\\hline\end{tabular} \vspace{5pt}\textbf{Instructions:}\begin{itemize}\item We have $\duration$ minutes for this exam.\item You can use a calculator if you wish, but that\rq{}s all. No books, no notes, no cards, no laptops, no other electronic devices. Nothing else. \item Cell phones are to be turned off and out of reach. \end{itemize}%\hlineFor all the problems you \underline{have to show your work}.\problem Find $\frac{\partial z}{\partial x}$, $\frac{\partial z}{\partial y}$.  $$ \ln(x+z)+e^{yz}+\sin(xy)=20.$$ \newpage  \problem Consider the following parametrized curve: $$\overrightarrow{r}(s)=\left(\left(1-\frac{2}{3}s\right)^{\frac{3}{2}},\left(\frac{2}{3}s\right)^{\frac{3}{2}}\right),\; 0\le s\le\frac{3}{2}.$$\begin{enumerate}[(a)] \item Verify that $s$ is an arc-length parameter. \item Find the unit tangent vector $T(s)$ and the unit normal vector $N(s)$. \item Find the curvature.\end{enumerate}\newpage.\newpage\problem Let $f(x,y)$ be the function $\begin{cases}\frac{x}{y}+  \frac{y}{x}& \mbox{, if } x,y\neq 0\\0 & \mbox{, if } x=0\mbox{ or } y=0\\ \end{cases}$\begin{enumerate}[(a)] \item Find the partial derivatives $f_x(x,y),f_y(x,y)$ (i) when  $x,y\neq 0$ and (ii) when $(x,y)=(0,0)$.\item Find the gradient $\bigtriangledown f$ at $(1,2)$ and $(0,0)$. \item Find the (directional) derivative $D_u(f)$ at $(1,2)$ and $(0,0)$ in the direction of $\overrightarrow{u}=(2,3)$. \item Find the direction $\overrightarrow{u}$ that maximizes $D_u(f)(1,2)$. That is the value of $D_u(f)(1,2)$ in this direction? \end{enumerate} \newpage. \newpage   \problem Let $f(x,y)=4x^2e^y-2x^4-e^{4y}$. Find all critical points of $f$ and determine if they are relative minimum, relative maximum, or saddle points.  \newpage.  \end{document}","2014-3-10");

@@ -12,7 +12,7 @@ class QueriesController extends Controller
 		}
 		
 
-		$this->render('StudentAnswers', array(
+		$this->render('studentAnswers', array(
 				'StudentAnswers'=>$StudentAnswers,
 				'Student' => $Student,
 				'Assignment' => $Assignment,
@@ -41,7 +41,7 @@ class QueriesController extends Controller
 			);
 		}
 	
-		$this->render('Assignments', array(
+		$this->render('assignments', array(
 				'allExamAverages'=> $allExamAverages,
 				'Semester'=>$Semester,
 				'Year'=>$Year
@@ -50,7 +50,7 @@ class QueriesController extends Controller
 	
 	public function actionAdministrative()
 	{
-		$this->render('Administrative', array());
+		$this->render('administrative', array());
 	}
 	
 	public function actionAllClasses($Semester, $Year)
@@ -69,7 +69,7 @@ class QueriesController extends Controller
 					);
 		}
 		
-		$this->render('AllClasses', array(
+		$this->render('allClasses', array(
 				'Semester'=>$Semester,
 				'Year'=>$Year,
 				));
@@ -84,7 +84,7 @@ class QueriesController extends Controller
 			$model->attributes = $_GET['EnrolledInClass'];
 		}
 		
-		$this->render('EnrolledInClass', array(
+		$this->render('enrolledInClass', array(
 				'model'=>$model,
 				'CourseName'=>$CourseName, 
 				'CourseNumber'=>$CourseNumber,
@@ -111,7 +111,7 @@ class QueriesController extends Controller
 			$studentExamPercentages->attributes = $_GET['StudentExamPercentages'];
 		}
 		
-		$this->render('StudentInfo', array(
+		$this->render('studentInfo', array(
 				'studentEnrollment'=>$studentEnrollment,
 				'studentExamPercentages'=>$studentExamPercentages,
 				'StudentID'=>$StudentID,
@@ -290,7 +290,7 @@ class QueriesController extends Controller
 			$model->attributes = $_GET['Enrollment'];
 		}
 		
-		$this->render('Enrollment', array(
+		$this->render('enrollment', array(
 				'model'=> $model,
 				'Semester'=>$Semester,
 				'Year'=>$Year,
@@ -319,7 +319,7 @@ class QueriesController extends Controller
 			);
 		}
 	
-		$this->render('Students', array(
+		$this->render('students', array(
 				'model'=> $model,
 				'Semester'=>$Semester,
 				'Year'=>$Year
@@ -348,7 +348,7 @@ class QueriesController extends Controller
 			);
 		}
 	
-		$this->render('Questions', array(
+		$this->render('questions', array(
 				'model'=> $model,
 				'Semester'=>$Semester,
 				'Year'=>$Year

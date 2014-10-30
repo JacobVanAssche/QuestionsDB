@@ -36,7 +36,7 @@
 				array('label'=>'Students', 'url'=>array('queries/students&Semester=&Year=')),
 				array('label'=>'Assignments', 'url'=>array('queries/assignments&Semester=&Year=')),
 				array('label'=>'Questions', 'url'=>array('queries/questions&Semester=&Year=')),
-				array('label'=>'Administrative', 'url'=>array('site/Administrative')),
+				array('label'=>'Administrative', 'url'=>array('site/administrative')),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),
 		)); ?>

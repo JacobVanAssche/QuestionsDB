@@ -4,7 +4,7 @@
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
  * @link http://www.yiiframework.com/
- * @copyright Copyright &copy; 2008-2011 Yii Software LLC
+ * @copyright 2008-2013 Yii Software LLC
  * @license http://www.yiiframework.com/license/
  */
 
@@ -50,8 +50,8 @@ class CPgsqlColumnSchema extends CDbColumnSchema
 			$this->defaultValue=null;
 		elseif(preg_match('/^\'(.*)\'::/',$defaultValue,$matches))
 			$this->defaultValue=$this->typecast(str_replace("''","'",$matches[1]));
-		elseif(preg_match('/^-?\d+(\.\d*)?$/',$defaultValue,$matches))
-			$this->defaultValue=$this->typecast($defaultValue);
+		elseif(preg_match('/^(-?\d+(\.\d*)?)(::.*)?$/',$defaultValue,$matches))
+			$this->defaultValue=$this->typecast($matches[1]);
 		// else is null
 	}
 }

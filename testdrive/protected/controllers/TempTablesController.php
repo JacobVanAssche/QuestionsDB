@@ -24,7 +24,7 @@ class TempTablesController extends Controller
 	
 	public function actionTmp6Error($text)
 	{
-		$this->render('Tmp6Error', array('text'=>$text));
+		$this->render('tmp6Error', array('text'=>$text));
 	}
 	
 	public function actionUpdateTmp6()
@@ -144,7 +144,7 @@ class TempTablesController extends Controller
 
 		}
 
-		$this->render('UpdateTmp6',array(
+		$this->render('updateTmp6',array(
 				'tmp6'=>$tmp6,
 		));
 	}
@@ -168,7 +168,7 @@ class TempTablesController extends Controller
 		}
 		else
 		{
-			$this->redirect("index-test.php?r=tempTables/NewPotentialAnswer");
+			$this->redirect("index-test.php?r=tempTables/newPotentialAnswer");
 		}
 		
 		$query = "SELECT PotentialAnswer FROM tmp_5
@@ -193,7 +193,7 @@ class TempTablesController extends Controller
 			$command = $con->createCommand($query);
 			$numPotential = $command->queryScalar();
 				
-			$path = 'tempTables/UpdateTmp5&Header=';
+			$path = 'tempTables/updateTmp5&Header=';
 				
 			if ($_POST['action'] == 'Previous')
 			{
@@ -309,7 +309,7 @@ class TempTablesController extends Controller
 			
 			else if ($_POST['action'] == 'Add Potential Answer')
 			{
-				$path = 'tempTables/NewPotentialAnswer';
+				$path = 'tempTables/newPotentialAnswer';
 			}
 			else if ($_POST['action'] == 'Review All')
 			{
@@ -390,7 +390,7 @@ class TempTablesController extends Controller
 				
 		}
 
-		$this->render('UpdateTmp5',array(
+		$this->render('updateTmp5',array(
 				'tmp5'=>$tmp5,
 		));
 	}
@@ -716,7 +716,7 @@ class TempTablesController extends Controller
 					$command = $con->createCommand($query);
 					$Part = $command->queryScalar();
 			
-					$path = 'index-test.php?r=tempTables/updateTmp5&Header='.$value.'&Part='.$Part;
+					$path = 'index.php?r=tempTables/updateTmp5&Header='.$value.'&Part='.$Part;
 				}
 				else
 				{
@@ -925,13 +925,13 @@ class TempTablesController extends Controller
 
 			 if ($tmp5->save())
 			{
-				$path = 'index-test.php?r=tempTables/UpdateTmp5&Header='.$tmp5->getAttribute('Header').'&Part='.$tmp5->getAttribute('Part');
+				$path = 'index.php?r=tempTables/updateTmp5&Header='.$tmp5->getAttribute('Header').'&Part='.$tmp5->getAttribute('Part');
 				$this->redirect($path);
 			}
 
 		}
 			
-		$this->render('AddPotentialAnswer',array(
+		$this->render('addPotentialAnswer',array(
 				'tmp5'=>$tmp5,
 		));
 
@@ -958,7 +958,7 @@ class TempTablesController extends Controller
 
 			if ($header != "")
 			{
-				$this->redirect('index-test.php?r=tempTables/UpdateTmp5&Header='.$Header.
+				$this->redirect('index.php?r=tempTables/updateTmp5&Header='.$Header.
 						'&Part='.$Part);
 			}
 			else
@@ -1018,23 +1018,23 @@ class TempTablesController extends Controller
 					$command = $con->createCommand($query);
 					$Part = $command->queryScalar();
 						
-					$path = 'index-test.php?r=tempTables/updateTmp5&Header='.$value.'&Part='.$Part;
+					$path = 'index.php?r=tempTables/updateTmp5&Header='.$value.'&Part='.$Part;
 				}
 				else
 				{
-					$path = 'index-test.php?r=tempTables/ReviewAll';
+					$path = 'index.php?r=tempTables/ReviewAll';
 				}
 				$this->redirect($path);
 			}
 			else if ($tmp5->save())
 			{
-				$path = 'index-test.php?r=tempTables/UpdateTmp5&Header=' . $tmp5->getAttribute('Header') . '&Part=' . $tmp5->getAttribute('Part');
+				$path = 'index.php?r=tempTables/updateTmp5&Header=' . $tmp5->getAttribute('Header') . '&Part=' . $tmp5->getAttribute('Part');
 				$this->redirect($path);
 			}
 
 		}
 			
-		$this->render('NewPotentialAnswer',array(
+		$this->render('newPotentialAnswer',array(
 				'tmp5'=>$tmp5,
 		));
 	}
